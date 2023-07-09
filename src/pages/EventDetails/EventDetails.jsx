@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-// import "./style/EventDetails.css";
+import "./style/EventDetails.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -122,15 +122,18 @@ function EventDetails() {
       <div className="container">
         <div className="row" id="row-event-details" key={event.eventId}>
           <div className="col" id="col-description">
-            <h1>{event.eventTitle}</h1>
+            <h1 style={{ paddingTop: "25px" }}>{event.eventTitle}</h1>
+            <br />
             <h2>
               {new Date(event.eventStartingDate).toLocaleDateString("tr-TR")}
               {" - "}
               {new Date(event.eventEndDate).toLocaleDateString("tr-TR")}
             </h2>
+            <br />
             <h3>Açıklama</h3>
-            <p>{event.eventDescription}</p>
-            <h3>Bilet Seçenekleri</h3>
+            <br />
+            <p style={{ fontSize: "22px" }}>{event.eventDescription}</p>
+            <h3 style={{ marginBottom: "20px" }}>Bilet Seçenekleri</h3>
             <div className="row">
               <h4>Tam bilet: {event.eventPrice} ₺</h4>
               <h4>Öğrenci: {event.eventPrice * 0.75} ₺</h4>
@@ -146,7 +149,7 @@ function EventDetails() {
               slidesToShow={3}
               slidesToScroll={1}
               touchMove={true}
-              width={500}
+              width={700}
               height={300}
               showThumbs={false}
               showStatus={false}
@@ -200,25 +203,15 @@ function EventDetails() {
 
         <div className="row">
           <div className="col">
-            <iframe
-              src={`https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=${eventPlaceReplace}`}
-              width="600"
-              height="450"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              id="maps-address"
-            ></iframe>
-
             <div className="col" id="address">
-              <h2>{eventPlace}</h2>
+              <h2 style={{ fontSize: "36px" }}>{eventPlace}</h2>
+              <br />
               {eventAddress}
             </div>
           </div>
           <div className="col">
-            <h2>Bilet Ayırt</h2>
-            <form onSubmit={handleSubmit}>
+            <h2 style={{ fontSize: "36px", marginTop: "40px" }}>Bilet Rezervasyon</h2><br />
+            <form onSubmit={handleSubmit} className="form-ticket">
               <label htmlFor="fname">İsim</label>
               <input type="text" id="fname" required="" />
               <label htmlFor="lname">Soyisim</label>
@@ -278,8 +271,8 @@ function EventDetails() {
                 value={new Date().toLocaleDateString("tr-TR")}
                 readOnly
               />
-              <button id="btn-ticket" type="submit">
-                Bilet Ayırt
+              <button id="btn-ticket" type="submit" style={{ borderRadius: "15px" }}>
+                Rezervasyon
               </button>
             </form>
           </div>

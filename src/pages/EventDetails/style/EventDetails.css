@@ -1,16 +1,17 @@
 /*--------------------general-------------------- */
 
-body{
+/* body{
   margin: 0;
-}
+} */
 
 #col-description h1 {
   font-size: 48px;
 }
 
-input[type="number"],
-input[type="tel"],
-input[type="text"],
+
+.form-ticket input[type="number"],
+.form-ticket input[type="tel"],
+.form-ticket input[type="text"],
 select {
   width: 100%;
   padding: 12px 20px;
@@ -19,6 +20,7 @@ select {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  font-size: 22px;
 }
 
 @font-face {
@@ -59,6 +61,11 @@ select {
   justify-content: space-evenly;
   flex-wrap: wrap;
   margin-bottom: 50px;
+}
+
+.row h4 {
+  font-size: 22px;
+  padding: 10px;
 }
 
 #row-event-details {
@@ -102,7 +109,7 @@ select {
   background-color: #3498db;
   margin-right: 15px;
   border-radius: 15px;
-  font-size: large;
+  font-size: 28px;
 }
 
 .hashtag-item a {
@@ -127,12 +134,12 @@ select {
   border-radius: 15px;
 }
 
-.col form {
+.col .form-ticket {
   max-width: 600px;
 }
 
 #btn-ticket {
-  width: 25%;
+  width: 50%;
   background-color: #3498db;
   color: white;
   padding: 14px 20px;
@@ -171,13 +178,9 @@ select {
   }
   .hashtag-item {
     font-size: small;
-    padding: 10px;
+    padding: 7px;
   }
   #img-top-col {
     padding: 25px;
-  }
-  .col iframe {
-    width: 300px;
-    height: 250px;
   }
 }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./style/Homepage.css";
+import styled from "./style/Homepage.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCalendar,
