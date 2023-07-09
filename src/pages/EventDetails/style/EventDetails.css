@@ -1,0 +1,183 @@
+/*--------------------general-------------------- */
+
+body{
+  margin: 0;
+}
+
+#col-description h1 {
+  font-size: 48px;
+}
+
+input[type="number"],
+input[type="tel"],
+input[type="text"],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*--------------------navbar-------------------- */
+
+.eventdetails-navbar {
+  display: flex;
+  background-color: #3498db;
+  justify-content: space-around;
+  padding: 15px;
+}
+
+.eventdetails-navbar a {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-size: 28px;
+}
+
+/*--------------------section 1-------------------- */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  padding: 50px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+#row-event-details {
+  border: 2px solid #0c2333;
+  border-radius: 20px;
+  color: #555555;
+}
+
+#img-top-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+#img-cover {
+  height: auto;
+  width: 100%;
+  border-radius: 15px;
+}
+
+#col-description {
+  max-width: 500px;
+}
+
+#hashtag {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.hashtag-item {
+  padding: 15px;
+  color: white;
+  background-color: #3498db;
+  margin-right: 15px;
+  border-radius: 15px;
+  font-size: large;
+}
+
+.hashtag-item a {
+  text-decoration: none;
+  color: white;
+}
+
+/*--------------------section 2-------------------- */
+
+.col iframe {
+  margin-top: 30px;
+}
+
+#address {
+  justify-content: center;
+  font-size: 30px;
+  max-width: 500px;
+  margin-top: 30px;
+}
+
+#maps-address {
+  border-radius: 15px;
+}
+
+.col form {
+  max-width: 600px;
+}
+
+#btn-ticket {
+  width: 25%;
+  background-color: #3498db;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#btn-ticket:hover {
+  background-color: #555555;
+  color: white;
+}
+
+/*--------------------footer-------------------- */
+
+.eventdetails-footer {
+  display: flex;
+  background-color: #3498db;
+  justify-content: space-evenly;
+  padding: 15px;
+}
+
+.eventdetails-footer a {
+  text-decoration: none;
+  color: white;
+  font-size: 28px;
+}
+
+/*--------------------media query-------------------- */
+
+/* Küçük ekranlar için media query */
+@media screen and (max-width: 768px) {
+  #col-description {
+    padding: 30px;
+  }
+  .hashtag-item {
+    font-size: small;
+    padding: 10px;
+  }
+  #img-top-col {
+    padding: 25px;
+  }
+  .col iframe {
+    width: 300px;
+    height: 250px;
+  }
+}
