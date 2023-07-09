@@ -169,21 +169,21 @@ function Homepage() {
     const selectedStartDate = new Date(e.target.value);
     const filteredEvents = events.filter((event) => {
       const eventStartDate = new Date(event.eventStartingDate);
-      if (eventStartDate >= selectedStartDate) {
-        setEvents(filteredEvents);
-      }
+      return eventStartDate >= selectedStartDate;
     });
+    setEvents(filteredEvents);
   };
+  
 
   const handleEndDateFilter = (e) => {
     const selectedEndDate = new Date(e.target.value);
     const filteredEvents = events.filter((event) => {
       const eventEndDate = new Date(event.eventStartingDate);
-      if (eventEndDate <= selectedEndDate) {
-        setEvents(filteredEvents);
-      }
+      return eventEndDate <= selectedEndDate;
     });
+    setEvents(filteredEvents);
   };
+  
 
   return (
     <div className="grid-container">
